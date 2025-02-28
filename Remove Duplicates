@@ -1,0 +1,21 @@
+26. Remove Duplicates from Sorted Array
+Solution:
+import java.util.*;
+class Solution {
+    public int removeDuplicates(int[] nums) {
+      List<Integer> num =   new ArrayList<>();
+      for(int i : nums){
+        num.add(i);
+      }
+       
+         for(int i =num.size()-1;i>0;i--){
+            if(num.get(i).equals(num.get(i-1))){
+                num.remove(i);
+            }
+         }
+         for (int i = 0; i < num.size(); i++) {
+            nums[i] = num.get(i);
+        }
+         return num.size();
+    }
+}
