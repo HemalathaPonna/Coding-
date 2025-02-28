@@ -1,0 +1,25 @@
+42. Trapping Rain Water
+Solution :
+import java.util.*;
+class Solution {
+    public int trap(int[] he) {
+        int n = he.length;
+     int le[] = new int[n];
+     int ri[] = new int[n];
+       le[0] = he[0];
+     for(int i = 1;i<n;i++ ){
+        le[i] = Math.max(he[i],le[i-1]);
+     }
+     ri[n-1] = he[n-1];
+     for(int i = n-2;i>=0;i--){
+        ri[i] = Math.max(he[i],ri[i+1]);
+     }
+     int water = 0;
+
+    for(int i =0;i<n;i++){
+        int wl = Math.min(le[i],ri[i]);
+        water += (wl-he[i]);
+    }
+ return water;
+ }
+}
