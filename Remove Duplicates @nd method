@@ -1,0 +1,17 @@
+26. Remove Duplicates from Sorted Array
+Solution:
+import java.util.*;
+class Solution {
+    public int removeDuplicates(int[] nums) {
+   LinkedHashSet<Integer> hset = new LinkedHashSet<>();
+    for( int i  : nums){
+        hset.add(i);
+    }
+     int count  = 0;
+    for(Integer i : hset) {
+        nums[count] = i;
+        count++;
+    }
+    return count;
+    }
+}
