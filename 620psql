@@ -1,0 +1,5 @@
+620. Not Boring Movies
+Solution:
+select * from cinema 
+where description <> ( "boring")  && mod(id,2) != 0 
+order by rating desc;
