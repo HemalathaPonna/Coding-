@@ -1,0 +1,4 @@
+178. Rank Scores
+Solution:
+SELECT score, dense_rank() OVER(ORDER BY score DESC) as "rank"
+FROM Scores;
