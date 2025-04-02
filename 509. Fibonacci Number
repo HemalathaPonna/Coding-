@@ -1,6 +1,5 @@
+java :
 
-
-```java
 class Solution {
     public int fib(int n) {
         if (n == 0) return 0;
@@ -16,5 +15,5 @@ class Solution {
     }
 }
  Optimized Complexity
-- Time Complexity:** \( O(n) \)
-- Space Complexity:** \( O(1) \) – Only two variables are used instead of an array.
+- Time Complexity ( O(n) )
+- Space Complexity :( O(1) ) – Only two variables are used instead of an array.
